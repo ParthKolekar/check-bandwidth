@@ -66,6 +66,7 @@ def main():
     for interface, interface_statistics in statistics.items():
         print('{0}_rx={1[rx_kbytes_s]:f}MB;;;; {0}_tx={1[tx_kbytes_s]:f}MB;;;; '.format(interface, interface_statistics), end='')
 
+    print()
 
 if __name__ == '__main__':
     main()
