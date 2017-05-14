@@ -63,8 +63,8 @@ def main():
     print('|', end='')
     print('total_rx={0[rx_kbytes_s]:f}MB;;;; total_tx={0[tx_kbytes_s]:f}MB;;;; '.format(total), end='')
 
-    for interface, interface_statistics in statistics.items():
-        print('{0}_rx={1[rx_kbytes_s]:f}MB;;;; {0}_tx={1[tx_kbytes_s]:f}MB;;;; '.format(interface, interface_statistics), end='')
+    for interface in INTERFACES:
+        print('{0}_rx={1[rx_kbytes_s]:f}MB;;;; {0}_tx={1[tx_kbytes_s]:f}MB;;;; '.format(interface, statistics[interface]), end='')
 
     print()
 
